@@ -16,6 +16,7 @@
     padding: 25px;
     position: relative;
     width: 40%;
+    z-index: 1;
 }
 
 .basic-modal-content h1 {

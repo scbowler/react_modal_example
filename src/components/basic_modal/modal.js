@@ -3,7 +3,7 @@ import './modal.css';
 
 class ButtonModal extends Component {
     state = {
-        isOpen: true
+        isOpen: false
     };
 
     open = () => this.setState({isOpen: true});
@@ -14,9 +14,9 @@ class ButtonModal extends Component {
 
         if(this.state.isOpen){
             return (
-                <div className="basic-modal">
-                    <div className="basic-modal-content">
-                        <div className="basic-modal-close">X</div>
+                <div className="basic-modal" onClick={this.close}>
+                    <div onClick={e => e.stopPropagation()} className="basic-modal-content">
+                        <div onClick={this.close} className="basic-modal-close">X</div>
                         <h1>Basic Modal Example</h1>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis fugiat laboriosam quo? Ab officia tempore ratione id, modi possimus adipisci autem, inventore reiciendis facere nesciunt.</p>
                     </div>

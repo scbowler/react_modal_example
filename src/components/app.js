@@ -11,10 +11,10 @@ const App = () => (
                 <BasicModal />
             </div>
             <div className="col-4 text-center">
-                
+                <p>Confirm/Cancel Example Coming Soon</p>
             </div>
             <div className="col-4 text-center">
-            
+                <p>Outside Event Triggered Example Coming Soon</p>
             </div>
         </div>
     </div>
