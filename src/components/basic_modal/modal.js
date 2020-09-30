@@ -11,9 +11,9 @@ class ButtonModal extends Component {
     close = () => this.setState({isOpen: false});
 
     render(){
-
-        if(this.state.isOpen){
-            return (
+         const btnView=this.state.isOpen?(
+            
+           return (
                 <div className="basic-modal" onClick={this.close}>
                     <div onClick={e => e.stopPropagation()} className="basic-modal-content">
                         <div onClick={this.close} className="basic-modal-close">X</div>
@@ -22,11 +22,12 @@ class ButtonModal extends Component {
                     </div>
                 </div>
             )
-        }
-
-        return (
+         ):(return (
             <button onClick={this.open} className="btn btn-outline-primary">Open Button Modal</button>
-        );
+        )
+         )
+          
+        {  btnView }
     }
 }
 
